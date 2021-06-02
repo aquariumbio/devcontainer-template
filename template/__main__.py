@@ -33,7 +33,16 @@ def get_argument_parser() -> ArgumentParser:
     return parser
 
 def do_say_hello(args: Namespace) -> None:
-    print("Hello {}".format(args.name))
+    """
+    Print say hello
+    """
+    print(say_hello(args.name))
+
+def say_hello(name):
+    """
+    Say hello
+    """
+    return "Hello {}".format(name)
 
 if __name__ == "__main__":
     main()
